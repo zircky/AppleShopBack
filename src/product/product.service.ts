@@ -7,10 +7,7 @@ import { convertToNumber } from 'src/utils/convert-to-number'
 import { generateSlug } from 'src/utils/generate-slug'
 import { EnumProductSort, GetAllProductDto } from './dto/get-all.product.dto'
 import { ProductDto } from './dto/product.dto'
-import {
-	productReturnObject,
-	productReturnObjectFullest
-} from './return-product.object'
+import { productReturnObject, productReturnObjectFullest } from './return-product.object'
 
 @Injectable()
 export class ProductService {
@@ -60,6 +57,8 @@ export class ProductService {
 			)
 
 		if (dto.categoryId) filters.push(this.getCategoryFilter(+dto.categoryId))
+
+		if (dto.storage) filters.push(this.getStorageFilter(dto.storage))
 
 		return filters.length ? { AND: filters } : {}
 	}
@@ -113,6 +112,7 @@ export class ProductService {
 					rating: {
 						in: ratings
 					}
+					
 				}
 			}
 		}
@@ -146,6 +146,12 @@ export class ProductService {
 	private getCategoryFilter(categoryId: number): Prisma.ProductWhereInput {
 		return {
 			categoryId
+		}
+	}
+
+	private getStorageFilter(storage: string): Prisma.ProductWhereInput {
+		return {
+			storage
 		}
 	}
 
@@ -217,7 +223,7 @@ export class ProductService {
 				description: '',
 				name: '',
 				price: 0,
-				slug: ''
+				slug: '',
 			}
 		})
 

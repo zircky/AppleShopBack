@@ -13,6 +13,7 @@ import { ProductModule } from './product/product.module'
 import { ReviewModule } from './review/review.module'
 import { StatisticsModule } from './statistics/statistics.module'
 import { UserModule } from './user/user.module'
+import { ImagesModule } from './images/images.module';
 
 @Module({
 	imports: [
@@ -28,7 +29,8 @@ import { UserModule } from './user/user.module'
 		CategoryModule,
 		OrderModule,
 		StatisticsModule,
-		PaginationModule
+		PaginationModule,
+		ImagesModule
 	],
 	controllers: [AppController],
 	providers: [AppService, PrismaService]

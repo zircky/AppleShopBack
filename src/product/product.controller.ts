@@ -41,6 +41,11 @@ export class ProductController {
 		return this.productService.byCategory(categorySlug)
 	}
 
+	@Get('by-images/:imagesSlug')
+	async getProductsByImage(@Param('imagesSlug') inagesSlug: string) {
+		return this.productService.byImagesSlug(inagesSlug)
+	}
+
 	@UsePipes(new ValidationPipe())
 	@HttpCode(200)
 	@Auth('admin')

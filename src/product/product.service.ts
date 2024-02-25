@@ -193,6 +193,31 @@ export class ProductService {
 		return products
 	}
 
+	async byImagesSlug(imagesSlug: string) {
+		const products = await this.prisma.product.findMany({
+			where: {
+				images: {
+					slug: imagesSlug
+				}
+			},
+			select: productReturnObjectFullest
+		})
+
+		if (!products) throw new NotFoundException('Product not found!')
+		return products
+	}
+
+	// async byImages(imagesI: string) {
+	// 	const prpducts = await this.prisma.product.findMany({
+	// 		where: {
+	// 			images: {
+	// 				images: imagesI
+	// 			}
+	// 		},
+	// 		select: productReturnObjectFullest
+	// 	})
+	// }
+
 	async getSimilar(id: number) {
 		const currentProduct = await this.byId(id)
 
@@ -231,7 +256,7 @@ export class ProductService {
 	}
 
 	async update(id: number, dto: ProductDto) {
-		const { description, images, price, name, categoryId } = dto
+		const { description, imagesId, price, name, categoryId } = dto
 
 		await this.categoryService.byId(categoryId)
 
@@ -241,7 +266,11 @@ export class ProductService {
 			},
 			data: {
 				description,
-				images,
+				images: {
+					connect: {
+						id: imagesId
+					}
+				},
 				price,
 				name,
 				slug: generateSlug(name),

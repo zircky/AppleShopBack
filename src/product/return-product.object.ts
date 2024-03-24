@@ -10,7 +10,13 @@ export const productReturnObject: Prisma.ProductSelect = {
 	name: true,
 	price: true,
 	createdAt: true,
+	storage: true,
 	slug: true,
+	screen: true,
+	photo: true,
+	processor: true,
+	operatingSystem: true,
+	displayRefreshRate: true,
 	category: { select: returnCategoryObject },
 	reviews: {
 		select: returnReviewObject,

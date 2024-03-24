@@ -9,7 +9,12 @@ export const product_iPhone = [
 		price: 479,
 		categoryId: 1,
 		imagesId: 2,
-		storage: '256 GB'
+		storage: '256 GB',
+		screen: '6.7" (2778x1284) OLED',
+		photo: '3 камеры, основная 12 МП',
+		processor: 'Apple A14 Bionics',
+		operatingSystem: 'IOS',
+		displayRefreshRate: '60 Гц'
 	},
 	{
 		id: 2,
@@ -35,7 +40,12 @@ export const product_iPhone = [
 		price: 499,
 		categoryId: 1,
 		imagesId: 3,
-		storage: '256 GB'
+		storage: '256 GB',
+		screen: '6.1" (2532x1170) OLED',
+		photo: '2 камеры, основная 12 МП',
+		processor: 'Apple A15 Bionic',
+		operatingSystem: 'IOS',
+		displayRefreshRate: '60 Гц'
 	},
 	{
 		id: 3,
@@ -49,7 +59,12 @@ export const product_iPhone = [
 		price: 899,
 		categoryId: 1,
 		imagesId: 4,
-		storage: '1 TB'
+		storage: '1 TB',
+		screen: '6.7" (2778x1284) OLED',
+		photo: '3 камеры, основная 12 МП',
+		processor: 'Apple A15 Bionic',
+		operatingSystem: 'IOS',
+		displayRefreshRate: '120 Гц'
 	},
 	{
 		id: 4,
@@ -60,7 +75,12 @@ export const product_iPhone = [
 		price: 499,
 		categoryId: 1,
 		imagesId: 5,
-		storage: '128 GB'
+		storage: '128 GB',
+		screen: '6.1" (2532x1170) OLED',
+		photo: '2 камера, основная 12 МП',
+		processor: 'Apple A15 Bionic',
+		operatingSystem: 'IOS',
+		displayRefreshRate: '60 Гц'
 	},
 	{
 		id: 5,
@@ -71,7 +91,12 @@ export const product_iPhone = [
 		price: 599,
 		categoryId: 1,
 		imagesId: 1,
-		storage: '128 GB'
+		storage: '128 GB',
+		screen: '6.7" (2778x1284) OLED',
+		photo: '2 камера, основная 12 МП',
+		processor: 'Apple A15 Bionic',
+		operatingSystem: 'IOS',
+		displayRefreshRate: '60 Гц'
 	},
 	{
 		id: 6,
@@ -96,7 +121,12 @@ export const product_iPhone = [
 		price: 1399,
 		categoryId: 1,
 		imagesId: 6,
-		storage: '1 TB'
+		storage: '1 TB',
+		screen: '6.1" (2556x1179) OLED',
+		photo: '3 камеры, основная 48 МП',
+		processor: 'Apple A16 Bionic',
+		operatingSystem: 'IOS',
+		displayRefreshRate: '120 Гц'
 	},
 	{
 		id: 7,
@@ -121,6 +151,11 @@ export const product_iPhone = [
 		price: 1499,
 		categoryId: 1,
 		imagesId: 6,
-		storage: '512 GB'
+		storage: '512 GB',
+		screen: '6.7" (2796x1290) OLED',
+		photo: '3 камеры, основная 48 МП',
+		processor: 'Apple A16 Bionic',
+		operatingSystem: 'IOS',
+		displayRefreshRate: '120 Гц'
 	},
 ]

@@ -48,6 +48,12 @@ model Product {
 
   storage String?
 
+  screen             String? // Экран
+  photo              String? // Фото(Камера)
+  processor          String? // процессор
+  operatingSystem    String? @map("operating_system") // операционная система
+  displayRefreshRate String? @map("display_refresh_rate") // частота обновления дисплея
+
   user   User? @relation(fields: [userId], references: [id])
   userId Int?  @map("user_id")
 }
